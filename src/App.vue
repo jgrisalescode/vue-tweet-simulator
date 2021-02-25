@@ -1,5 +1,5 @@
 <template>
-  <h1>Simulador de tweets</h1>
+  <h1 class="display-1">Simulador de tweets</h1>
 </template>
 
 <script>
