@@ -35,5 +35,6 @@ const getTweetsApi = () => {
 }
 
 export {
-  saveTweetApi
+  saveTweetApi,
+  getTweetsApi
 }

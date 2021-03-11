@@ -21,14 +21,26 @@ export default {
   props: {
     showForm: {
       type: Boolean
+    },
+    openCloseForm: {
+      type: Function
+    },
+    reloadTweets: {
+      type: Function
     }
   },
 
-  setup() {
+  setup(props) {
     let userName = ref('');
     let tweet = ref('');
+    
     const sendTweet = () => {
-      saveTweetApi(tweet.value, userName.value)
+      if (!tweet.value || !userName.value) return;
+      saveTweetApi(tweet.value, userName.value);
+      tweet.value = '';
+      userName.value = '';
+      props.reloadTweets();
+      props.openCloseForm();
     }
 
     return {
