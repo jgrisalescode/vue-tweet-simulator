@@ -4,19 +4,30 @@
     <div class="tweet mb-4" v-for="tweet in tweets" :key="tweet.id">
       <p class="tweet__title">{{tweet.username}}</p>
       <p class="tweet__text">{{tweet.tweet}}</p>
-      <span>{{tweet.createdAt}}</span>
+      <span>{{ formatDate(tweet.createdAt) }}</span>
     </div>
   </div>
 </template>
 
 <script>
+  import moment from 'moment';
+  import 'moment/locale/es';
+
   export default {
     props: {
       tweets: {
         type: Array
       }
     },
-    setup(props) {}
+    setup(props) {
+      const formatDate = (date) => {
+        return moment(date).fromNow();
+      }
+
+      return {
+        formatDate
+      }
+    }
   }
 </script>
 
