@@ -15,6 +15,7 @@
 
 <script>
 import {ref} from 'vue';
+import {saveTweetApi} from '../api/tweet'
 
 export default {
   props: {
@@ -27,9 +28,7 @@ export default {
     let userName = ref('');
     let tweet = ref('');
     const sendTweet = () => {
-      console.log('Enviando formulario...')
-      console.log('User name -> ' + userName.value)
-      console.log('Tweet -> ' + tweet.value)
+      saveTweetApi(tweet.value, userName.value)
     }
 
     return {
