@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="text-center">Lista de tweets</h1>
+    <h1 class="text-center">Tweets list</h1>
     <template v-if="tweets.length === 0">
-      <p>No tweets to show</p>
+      <p>There are not tweets to show</p>
     </template>
     <template v-else>
       <div class="tweet mb-4" v-for="tweet in tweets" :key="tweet.id">

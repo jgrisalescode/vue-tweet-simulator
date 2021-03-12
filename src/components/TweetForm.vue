@@ -5,10 +5,10 @@
       <textarea
           class="form-control"
           rows="3"
-          placeholder="Escribe tu tweet"
+          placeholder="Type a tweet"
           v-model="tweet">
       </textarea>
-      <button class="btn btn-primary" type="submit">Enviar tweet</button>
+      <button class="btn btn-primary" type="submit">Send tweet</button>
     </form>
   </div>
 </template>
