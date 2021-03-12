@@ -3,7 +3,7 @@
     <div class="container">
       <span class="navbar-brand">Tweets simulator</span>
       <button class="btn pl-4 pr-4" :class="{ 'btn-success': !showForm, 'btn-danger': showForm }" @click="openCloseForm">
-        {{ !showForm ? "Nuevo tweet" : "Cerrar tweet" }}
+        {{ !showForm ? "New tweet" : "Close tweet" }}
       </button>
     </div>
   </nav>
